@@ -89,4 +89,9 @@ function get_mes($mes,$lang)
 if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'blog-thumb', 509, 338 ); 
 }
+/*buscar imagenes*/
+
+/*fin*/
+
 ?>
+
