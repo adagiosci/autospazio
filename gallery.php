@@ -9,12 +9,12 @@
 	<h1>GALERÍAS</h1>
 	<div class='dot-points'></div>
 	<div class="select-form">
-	<form  method="post" action="?page_id=258">
+	<form  method="post" action="/galeria/">
 		<?php
 		global $wpdb;
 		$customers = $wpdb->get_results("SELECT gid,name FROM wp_ngg_gallery;");
 		/*print_r($customers);*/
-		echo "<select name='select'>";
+		echo "<select name='select' id='gallery_select'>";
 		foreach ($customers as $customer){
 			echo "<option value = '".$customer->name."'>".$customer->name."</option>"; 
 			/*echo $customer->gid;
@@ -22,7 +22,7 @@
 		}
 		echo "</select>";
 		?>
-		<input type='submit' value='Abrir'/>
+		<input type='submit' value='Buscar'/>
 	
 	</form>
 	

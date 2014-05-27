@@ -69,6 +69,11 @@ $(document).ready(function(e){
 		move_banner1(true);
 	})
 
+	$('#gallery_select').change(function(e){
+		var val = $(this).val()
+		alert(val)
+	})
+
 });
 function init_move_banner1(){
 	move_banner1(true);
