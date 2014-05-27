@@ -9,12 +9,12 @@
 	<h1>GALERÍAS</h1>
 	<div class='dot-points'></div>
 	<div class="select-form">
-	<form  name="busca" method="post" action="?page_id=9">
+	<form  method="post" action="?page_id=9">
 		<?php
 		global $wpdb;
 		$customers = $wpdb->get_results("SELECT gid,name FROM wp_ngg_gallery;");
 		/*print_r($customers);*/
-		echo "<select name='select' onchange='setFormAction(this)'>";
+		echo "<select name='select'>";
 		foreach ($customers as $customer){
 			echo "<option value = '".$customer->name."'>".$customer->name."</option>"; 
 			/*echo $customer->gid;
@@ -22,11 +22,21 @@
 		}
 		echo "</select>";
 		?>
-	<input type="text" name="idDsn" maxlength="9" readonly size="70" value='<?php echo $customer->gid;?>'>
+		<input type='submit' value='submit'/>
+	
 	</form>
 	
 	</div>
-		
+	<?php	/*aqui recibimos la opcion del combobox y hacemos la busqueda para sacar el id*/
+	global $wpdb;
+	if(!empty($_POST['select'])){
+    /*.. do your query section... */
+    $select = $_POST['select'];
+    $customers = $wpdb->get_results("SELECT gid FROM wp_ngg_gallery WHERE name=graduacion;");
+    echo $select;
+    
+    //echo $customers;
+} ?>
 	<?php /*se pone el shortcode de nextgen para hacer el filtrado por tag*/
 	echo do_shortcode('[nggallery id='.$customer->gid.' override_thumbnail_settings="1" thumbnail_width="240" thumbnail_height="180" thumbnail_crop="1" show_slideshow_link="0"]');
 	?>
