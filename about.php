@@ -9,12 +9,10 @@
 		<img src='<?php bloginfo('template_directory')?>/img/sliderabout.png' class='on' />
 	</div>
 	<div class='content'>
- 		<div class="contenido">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>
 			<?php endwhile; endif;?>
-	 	</div>
-	 	<img src='<?php bloginfo('template_directory')?>/img/imagen.png' />	 	
+	 	<!-- <img src='<?php bloginfo('template_directory')?>/img/imagen.png' />	 	 -->
 	</div>
 
 </div>

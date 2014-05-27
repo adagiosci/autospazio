@@ -5,7 +5,6 @@
 ?>
 <?php get_header(); ?>
 <?php $lang= 'es' ?>
-<div id="fb-root"></div>
 <div id='blog'>
 	<div class='banner'>
 		<img src='<?php bloginfo('template_directory')?>/img/blogslide.png' class='on' />

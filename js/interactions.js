@@ -59,6 +59,16 @@ $(document).ready(function(e){
 		});		
 	})
 
+	$('#home .box-bullets .arrow-right').click(function(e){
+		e.preventDefault()
+		move_banner1();
+	})
+
+	$('#home .box-bullets .arrow-left').click(function(e){
+		e.preventDefault()
+		move_banner1(true);
+	})
+
 });
 function init_move_banner1(){
 	move_banner1(true);
@@ -82,3 +92,4 @@ function move_banner1(right){
 			});
 		//}
 }
+

@@ -2,6 +2,10 @@
 add_action('init','register_menus');
 add_theme_support('post-thumbnails' );
 add_shortcode('service_info','service_info_func');
+add_shortcode('about_us_image','about_us_image_func');
+add_shortcode('about_us_contenido','about_us_contenido_func');
+add_shortcode('home_content','home_content_func');
+add_shortcode('home_banner','home_banner_func');
 function register_menus() {
 	register_nav_menus(array(
 		'header-menu' => __('Header Menu'),
@@ -16,18 +20,51 @@ function service_info_func($attrs,$content = ""){
 	else{
 		$title = '';
 	}
-
-	$dir = get_bloginfo('template_directory')."/img/{$attrs['image']}.png";
 	return "
 		<div class='colum'>
 			<div class='space'>$title</div>
-			<img src='$dir' class='slide1' />
 			<div class='text'>
 				$content
 			</div>
 		</div>
 	";
 }
+function about_us_contenido_func($attrs,$content = ""){
+	return "<div class='contenido'>$content</div>";
+}
+function about_us_image_func($attrs,$content = ""){
+	return "<div class='image'>$content</div>";
+}
+/*Homa functions*/
+function home_banner_func($attrs,$content = ""){
+	$dir = get_bloginfo('template_directory');
+	return "
+		
+	<div class='banner style1'>
+		$content
+		<div class='box-bullets'>
+			<a href='#' class='arrow-left'></a>
+			<a href='#' class='bullets on'></a>
+			<a href='#' class='bullets'></a>
+			<a href='#' class='bullets'></a>
+			<a href='#' class='bullets'></a>
+			<a href='#' class='bullets'></a>
+			<a href='#' class='bullets last'></a>
+			<a href='#' class='arrow-right'></a>
+		</div>
+	</div>			
+			<div class='mini-images'>
+				<img src='{$dir}/img/slide2.png' class='slide1' />
+				<img src='{$dir}/img/pic4-slide.png' class='slide2' />
+				<img src='{$dir}/img/slde-3.png' class='slide3' />
+				<img src='{$dir}/img/slide4.png' class='slide4' />
+			</div>			
+		";
+}
+function home_content_func($attrs,$content = ""){
+	return "<div class='content'>$content</div>";
+}
+
 /*
  * función que devuelve el numero de fans que se tienen en Facebook
  * solo necesitamos el ID de facebook y que la cuenta tenga activado la opcion de recibir likes
@@ -94,4 +131,3 @@ if ( function_exists( 'add_image_size' ) ) {
 /*fin*/
 
 ?>
-

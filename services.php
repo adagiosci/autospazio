@@ -13,7 +13,6 @@
 	</div>
 
 	<div class='contenido'>
-		<div class='imagen'><img src='<?php bloginfo('template_directory')?>/img/leftservices.png' /></div>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
 		<?php endwhile; endif;?>		
