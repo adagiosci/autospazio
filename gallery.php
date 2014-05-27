@@ -1,6 +1,6 @@
 <?php
 /*
-	Template Name: GALERIES
+	Template Name: GALLERY
 */
 ?>
 <?php get_header(); ?>
@@ -43,7 +43,7 @@
    //echo $gal
 } ?>
 	<?php /*se pone el shortcode de nextgen para hacer el filtrado por tag*/
-	echo do_shortcode('[nggtags gallery= override_thumbnail_settings="1" thumbnail_width="240" thumbnail_height="180" thumbnail_crop="1" show_slideshow_link="0"]');
+	echo do_shortcode('[nggallery id='.$mostrar.' override_thumbnail_settings="1" thumbnail_width="240" thumbnail_height="180" thumbnail_crop="1" show_slideshow_link="0"]');
 	 echo $mostrar;
 	?>
 </div>
