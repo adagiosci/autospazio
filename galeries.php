@@ -12,8 +12,8 @@ document.oncontextmenu = function(){return false}
 <div class='container-galleries'>
 	<h1>GALERÍAS</h1>
 	<div class='dot-points'></div>
-	<div class="select-form">
-	<form  method="post" action="/galeria/">
+	<div class="select-form"> <!-- en action para produccion se pone /galeria/ o el nombre de la pagina que usa este template -->
+	<form  method="post" action="?page_id=9">
 		<?php /*aqui hacemos la consulta de las galerias y las visualizamos en un combobox*/
 		global $wpdb;
 		$customers = $wpdb->get_results("SELECT gid,name FROM wp_ngg_gallery;");
