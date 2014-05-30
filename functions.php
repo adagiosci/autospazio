@@ -67,7 +67,7 @@ function home_content_func($attrs,$content = ""){
 */
 /*inicio funcion*/
 function get_fans(){
-	$page_id="198300823665756"; //ID FANS PAGE FACEBOOK//
+	$page_id="143719422343014";//"198300823665756"; //ID FANS PAGE FACEBOOK//
 	$xml = @simplexml_load_file("http://api.facebook.com/restserver.php?method=facebook.fql.query&query=SELECT%20fan_count%20FROM%20page%20WHERE%20page_id=".$page_id."") or die ("a lot");
 	$fans = $xml->page->fan_count;
 	return $fans;

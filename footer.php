@@ -11,8 +11,8 @@
 
 	</div>	
 	<div class='social'>
-		<a href='#' class='facebook left'></a>
-		<a href='#' class='twitter left'></a>
+		<a href='https://www.facebook.com/pages/AutoSpazio-Mexico/143719422343014?fref=ts' target="_blank" class='facebook left'></a>
+		<a href='https://twitter.com/Autospazio' target="_blank" class='twitter left'></a>
 		<a href='#' class='pinterest left'></a>
 		<a href='#' class='plus left'></a>
 		<div class='clear'></div>

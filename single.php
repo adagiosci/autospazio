@@ -39,7 +39,7 @@
 				<p class="textoF"><?php echo get_fans(); ?> <p class="textoF">Fans</p>
 				</div>
 				<div class='twitter'><img src='<?php bloginfo('template_directory')?>/img/twitter2.png'>
-				<?php $twitter = twitter_user_info("lmartineza82"); ?> 
+				<?php $twitter = twitter_user_info("Autospazio"); ?> 
 				<p class="textoT"><?php echo $twitter['followers_count'] ?></p> <p class="textoT">Followers</p> 
 				</div>
 				<div class='irc'><img src='<?php bloginfo('template_directory')?>/img/rss.png'></div>
