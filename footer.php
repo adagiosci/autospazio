@@ -6,6 +6,10 @@
 		<p class='autospazio'>AutoSpazio</p>
 		<p class='map'>Ciudad de México, México</p>
 	</div>
+	<div class='parners'>
+		<p class='title'>Parners</p>
+
+	</div>	
 	<div class='social'>
 		<a href='#' class='facebook left'></a>
 		<a href='#' class='twitter left'></a>
@@ -16,7 +20,9 @@
 		<p>Copyright <a href='http://www.rankeauno.com/'>RankeaUno</a> 2014</p>
 	</div>
 
-</div></footer>
+</div>
+<div class='black-line'></div>
+</footer>
 	<?php $pagename = get_query_var('pagename');?>
 	<?php if ($pagename != 'galeria'){ ?>
 		<script src='<?php bloginfo('template_directory') ?>/js/jquery.js' ></script>

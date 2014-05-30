@@ -20,27 +20,28 @@ a {text-decoration: none}
 .clear{clear:both}
 
 /*header*/
-header{height: 108px;border-bottom: 3px solid #080808;}
+header{height: 106px;}
 header .container{width: 1114px}
+header .black-line{width: 100%;height: 3px;background-color: #080808;display: block;position: absolute;top:72px;}
 header nav{position: relative;top:71px;width: 1114px;margin: 0px auto}
 header nav a{float: left;color:#383838;font-weight: bold;margin: 0px 54px 0px 0px}
 header nav a.on{background-color: #080808;color:white;padding: 3px 10px;margin-left: -15px}
 header nav a.logo{display: block;height: 1px;width: 185px;margin: 0px 75px 0px 78px}
-header nav a.logo img{position: absolute;width: 147px;top:-70px;}
+header nav a.logo img{position: absolute;width: 117px;top:-45px;}
 header nav li a.last{margin-right: 0px}
 
 /*Home*/
 /*#home {background: url(./img/pattern.png) repeat-x scroll center bottom transparent}*/
 #home{}
-#home .banner{width: auto;padding-bottom: 2px;height: 370px;overflow: hidden;position: relative;width: 1280px;margin: 0px auto}
-#home .banner img{margin: 0px auto;width: 1280px;display: block;position: absolute;top:0px;z-index: 0}
+#home .banner{height: auto;overflow: hidden;position: relative;width: 100%;margin: 0px auto}
+#home .banner p{height: 710px}
+#home .banner img{margin: 0px auto;width: 100%;display: block;position: absolute;top:0px;z-index: 0}
 #home .banner img.on{z-index: 1}
 #home .mini-images{width: 1282px;margin: 0px auto}
 #home .mini-images img.slide1{width: 426px}
 #home .mini-images img.slide2{width: 210px}
 #home .mini-images img.slide3{width: 426px}
 #home .mini-images img.slide4{width: 207px}
-
 
 /*#home .content{width: 954px;height: 220px;margin: 0px auto;font-family: 'open sans';text-align: center;padding: 24px 0px;}*/
 #home .content{width: 954px;height: auto;margin: 0px auto;font-family: 'open sans';text-align: center;padding: 24px 0px 0px 0px;}
@@ -196,11 +197,13 @@ header nav li a.last{margin-right: 0px}
 #blog .textoT .small{font-size: 10px}
 
 /*Footer*/
-footer{width: 100%;height:115px;background-color: #080808}
+footer{width: 100%;height:142px;background-color: white;border-top: 2px solid #080808}
+footer .black-line{background-color: #080808;height: 2px;width: 100%;position:absolute;bottom: 28px}
 footer .map{background: url(./img/point.png) no-repeat;margin-left: -5px;position: relative;padding-left: 18px}
-footer .address{border-left: 2px solid #FFFEFF;height:91px;width:200px;float: left;padding-left: 20px;margin-top: 12px;margin-left: 9px}
-footer .address p{color:#FFFEFF;font-size: 10px}
+footer .address{border-left: 2px solid #080808;border-right: 2px solid #080808;height:91px;width:325px;float: left;padding-left: 20px;margin-top: 12px;margin-left: 17px}
+footer .address p{color:#080808;font-size: 10px}
 footer .address p.autospazio{font-size: 16px;font-weight: bold;margin-top: 25px;line-height: 25px}
+footer .parners{height:91px;width:325px;float: left;margin-top: 12px;margin-left: 15px}
 footer .social{float: right;position: relative;margin-right: 30px;margin-top:29px;width: 200px}
 footer .footer{margin-left: 107px;margin-top:11px;width: 97px;float: left;}
 footer .container{width: 1280px;margin: 0px auto}

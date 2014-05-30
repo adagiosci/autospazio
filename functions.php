@@ -42,6 +42,7 @@ function home_banner_func($attrs,$content = ""){
 		
 	<div class='banner style1'>
 		$content
+		<div class='clear'></div>
 		<div class='box-bullets'>
 			<a href='#' class='arrow-left'></a>
 			<a href='#' class='bullets on'></a>
@@ -52,14 +53,8 @@ function home_banner_func($attrs,$content = ""){
 			<a href='#' class='bullets last'></a>
 			<a href='#' class='arrow-right'></a>
 		</div>
-	</div>			
-			<div class='mini-images'>
-				<img src='{$dir}/img/slide2.png' class='slide1' />
-				<img src='{$dir}/img/pic4-slide.png' class='slide2' />
-				<img src='{$dir}/img/slde-3.png' class='slide3' />
-				<img src='{$dir}/img/slide4.png' class='slide4' />
-			</div>			
-		";
+		<div class='clear'></div>
+	</div>";
 }
 function home_content_func($attrs,$content = ""){
 	return "<div class='content'>$content</div>";

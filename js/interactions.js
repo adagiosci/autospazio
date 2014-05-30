@@ -5,7 +5,14 @@ var px3=-32;
 var timer;
 var aux;
 $(document).ready(function(e){
-	timer_banner_1=setTimeout("init_move_banner1()",6000);
+
+	var size_img = $("#home .banner img").size()
+	$("#home .banner img").eq(size_img-1).addClass('on')
+	var height = $("#home .banner img").eq(size_img-1).attr('height')
+	$("#home .banner").height(height)
+	// timer_banner_1=setTimeout("init_move_banner1()",6000);
+
+
         
       $("#contact #form1").submit(function(e){
             e.preventDefault();
@@ -69,10 +76,10 @@ $(document).ready(function(e){
 		move_banner1(true);
 	})
 
-	$('#gallery_select').change(function(e){
+	/*$('#gallery_select').change(function(e){
 		var val = $(this).val()
 		alert(val)
-	})
+	})*/
 
 });
 function init_move_banner1(){

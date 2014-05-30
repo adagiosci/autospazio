@@ -17,6 +17,7 @@
 	<input type='hidden' value='<?php bloginfo('template_directory'); ?>' id='template_directory'>
 <div id="wrap"><div id="main" class="clearfix"><div id="topBackRepeat">
 <header>
+	<div class='black-line'></div>
 	<div class='container'>
 	<nav>
 		<ul>
