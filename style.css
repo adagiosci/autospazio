@@ -14,20 +14,20 @@ License URI:
 */
 @import url('css/reset.css');
 @import url('css/stickyFooter.css');
-body{font-size: 12pt;font-family:'open sans'}
+body{font-size: 12pt;font-family: 'Titillium Web', sans-serif;}
 a {text-decoration: none}
 .container{width: 862px;margin: 0px auto}
 .clear{clear:both}
 
 /*header*/
-header{height: 106px;}
+header{height: 105px;box-shadow: 0px 5px 10px #888888;z-index: 2;position: relative;}
 header .container{width: 1114px}
 header .black-line{width: 100%;height: 3px;background-color: #080808;display: block;position: absolute;top:72px;}
-header nav{position: relative;top:71px;width: 1114px;margin: 0px auto}
+header nav{position: relative;top:74px;width: 1114px;margin: 0px auto}
 header nav a{float: left;color:#383838;font-weight: bold;margin: 0px 54px 0px 0px}
 header nav a.on{background-color: #080808;color:white;padding: 3px 10px;margin-left: -15px}
 header nav a.logo{display: block;height: 1px;width: 185px;margin: 0px 75px 0px 78px}
-header nav a.logo img{position: absolute;width: 117px;top:-45px;}
+header nav a.logo img{position: absolute;width: 117px;top:-54px;}
 header nav li a.last{margin-right: 0px}
 
 /*Home*/
@@ -44,7 +44,7 @@ header nav li a.last{margin-right: 0px}
 #home .mini-images img.slide4{width: 207px}
 
 /*#home .content{width: 954px;height: 220px;margin: 0px auto;font-family: 'open sans';text-align: center;padding: 24px 0px;}*/
-#home .content{width: 954px;height: auto;margin: 0px auto;font-family: 'open sans';text-align: center;padding: 24px 0px 0px 0px;}
+#home .content{width: 954px;height: auto;margin: 0px auto;font-family: 'Titillium Web';text-align: center;padding: 24px 0px 0px 0px;}
 #home .content h1{font-weight: bolder;font-size: 18px;letter-spacing: 3.2px;color:#141414;margin-bottom: 12px}
 #home .content p{font-size: 14px;color:#9B9B9B;font-weight: lighter}
 #home .box-bullets{background-image: url(./img/bara_slide.png);display: block;width: 251px;height: 35px;position: absolute;bottom: 0px;right: 0px;z-index: 2}
@@ -76,18 +76,18 @@ header nav li a.last{margin-right: 0px}
 #services .banner img{margin: 0px auto;width: 1280px;display: block;position: relative;top:-6px;}
 #services img {float: left;margin-top: 0px; margin-right:60px;width: 264px;}
 #services .colum{float: left;width: 315px;font-size: 12px;}
-#services .colum h2{font-weight: bold;font-family: 'open sans';color:#080808;}
-#services .colum h3{font-weight: bold;font-family: 'open sans';color:#080808;line-height: 14px}
+#services .colum h2{font-weight: bold;color:#080808;}
+#services .colum h3{font-weight: bold;color:#080808;line-height: 14px}
 #services .colum p{color:#949494;line-height: 14px}
 #services .colum .text{width: 247px}
-#services .colum p{font-family: 'open sans'}
+#services .colum p{font-family: 'Titillium Web'}
 #services .colum hr{background-color: #D6D6D6,color:#D6D6D6;margin-bottom: 5px;margin-top: 5px}
 #services .colum .space{width: 100%;height: 36px}
 #services .contenido{width: 1280px;margin: 0px auto;padding-top:20px;}
 /*#services .contenido {width: 1280pxheight: 400px;margin: 0px auto;font-family: 'open sans';text-align: center;padding: 24px 0px;}*/
 #services .texto{font-size: 14px;color:#9B9B9B;font-weight: lighter; margin-top:0px; line-height: 18px}
 #services .titleservices{font-weight: bolder;font-size: 18px;letter-spacing: 0.5px;color:#141414;margin-bottom: 5px;position: relative;top:-6px;}
-#services .contentder{width: 100%;height: 400px;margin: 0px auto;font-family: 'open sans';text-align: center;padding: 24px 0px;}
+#services .contentder{width: 100%;height: 400px;margin: 0px auto;font-family: 'Titillium Web';text-align: center;padding: 24px 0px;}
 #services .mini-images{width: 1282px;margin: 0px auto}
 #services .mini-images img.slide1{width: 111px}
 
@@ -109,7 +109,7 @@ header nav li a.last{margin-right: 0px}
 #contact h2{width: 95%;padding: 25px 2.5%;display: block;background:#E6E6E6;margin: 63px 0;font-size: 13px;font-weight: 600px;border-radius: 5px;}
 #contact form .title{margin-left: 3px;margin-bottom: 15px;margin-top:10px;font-size: 17px;font-weight: 700;color: black;line-height: 26px}
 #contact form .title span{font-size: 19px}
-#contact form .submit{cursor: pointer;width: 104px;margin-top: 20px;color: black;display: block;font-size: 14px;padding:  7px 0;text-align: center;border-radius: 7px;font-weight: 600;height: 35px;font-family: "open sans",sans-serif}
+#contact form .submit{cursor: pointer;width: 104px;margin-top: 20px;color: black;display: block;font-size: 14px;padding:  7px 0;text-align: center;border-radius: 7px;font-weight: 600;height: 35px;font-family: 'Titillium Web',sans-serif}
 #contact .address .title{font-size: 18px;font-weight: 700;line-height: 27px;color:black;margin-bottom: 16px }
 #contact .address .title span{font-size: 19px;font-weight: normal;}
 #contact .address .direccion, #contact .address .telefonos, #contact .address .hours{margin-bottom: 10px;padding-left: 22px}
@@ -133,7 +133,7 @@ header nav li a.last{margin-right: 0px}
 .container-galleries h1{font-size: 20px;font-weight:bold;width: 121px;margin: 0px auto;background-color: black;color: white;padding: 5px 10px;margin-top:20px;}
 
 /*Blog*/
-#blog .banner h1{font-family: 'open sans';position: absolute;font-weight: bold;font-size: 30px;width: 100%;text-align: center;top:77px;}
+#blog .banner h1{font-family: 'Titillium Web';position: absolute;font-weight: bold;font-size: 30px;width: 100%;text-align: center;top:77px;}
 #blog .banner h1 span{background-color: rgba(0, 0, 0, 0.5);padding: 0px 10px}
 #blog .banner{color:white;}
 #blog{background: url(./img/pattern.png) repeat-x scroll center bottom transparent}
@@ -160,7 +160,7 @@ header nav li a.last{margin-right: 0px}
 #blog .archives ul li{margin-left: 10%}
 #blog .archives ul li a{color: black}
 #blog .archives ul li a:first-letter{text-transform: uppercase;}
-#blog article h2 a{color:black;font-size: 19px;line-height: 19px;font-weight: bold;font-family: 'open sans'}
+#blog article h2 a{color:black;font-size: 19px;line-height: 19px;font-weight: bold;font-family: 'Titillium Web'}
 #blog article .autor{font-size:11px;color: black}
 #blog article .autor span{}
 #blog article .autor span a{color: #609FD5}
@@ -169,7 +169,7 @@ header nav li a.last{margin-right: 0px}
 #blog article a.img{}
 #blog article a.img img{}
 #blog article .content{margin-bottom: 15px;margin-top:15px;font-size: 14px;color:#AFAFAF;}
-#blog article a.read_more{color:#AFAFAF;font-family: 'open sans'}
+#blog article a.read_more{color:#AFAFAF;font-family: 'Titillium Web'}
 
 #blog .social .search{width: 254px;height: 40px;display: block;margin-bottom: 28px;position: relative;}
 #blog .social .search .label{color:#A3A8AC;border-bottom: 1px solid #C8C8C8;padding: 10px;width: 254px;border-top: 1px solid #E5E5E5;border-left: 1px solid #E5E5E5;border-right: 1px solid #E5E5E5;}
@@ -181,19 +181,19 @@ header nav li a.last{margin-right: 0px}
 #blog .irc img {width:23.5px;height:23.5px;margin: 11px 11px}
 #blog .social .snet .twitter{border: 1px #00CAF3 solid;width: 80px;height: 86px;display: block;float: left;margin-right: 8px;border-radius: 3px}
 #blog .social .snet .irc{border: 1px #FD7000 solid;width: 80px;height: 86px;display: block;float: left;border-radius: 3px}
-#blog .social .cat .tab{padding:5px 7px;margin-right:9px;display: block;float: left;color:black;font-size: 11px;font-family: 'open sans'}
+#blog .social .cat .tab{padding:5px 7px;margin-right:9px;display: block;float: left;color:black;font-size: 11px;font-family: 'Titillium Web'}
 #blog .social .cat .tab{border:2px solid #E4E1E3}
 #blog .social .cat .tab.on{background-color: black;color:white;border:2px solid black}
 #blog .social .cat .post-cat{display: none;width: 100%;min-height: 178px;padding:24px 18px;background-color: white}
 #blog .social .cat .post-cat .image{width: 52px;height: 52px;display: block;float: left;margin-right: 15px}
 #blog .social .cat .post-cat .article{float: left;}
-#blog .social .cat .post-cat .article .title{color: black;font-family: 'open sans';font-size: 11px;font-weight: bold}
+#blog .social .cat .post-cat .article .title{color: black;font-family: 'Titillium Web';font-size: 11px;font-weight: bold}
 #blog .social .cat .post-cat .article .date{color: #C4C4C6;font-size: 10px;font-weight: bold;}
 #blog .social .cat .post-cat.on{display: block;}
 
-#blog .textoF{margin-left:10px;font-family: "open sans";font-size: 14px;color:#305b9f;font-weight: bold;  margin-top:-5px; line-height: 14px}
+#blog .textoF{margin-left:10px;font-family: 'Titillium Web';font-size: 14px;color:#305b9f;font-weight: bold;  margin-top:-5px; line-height: 14px}
 #blog .textoF .small{font-size: 10px}
-#blog .textoT{margin-left:10px;font-family: "open sans";font-size: 14px;color:#31b9d3;font-weight: bold;  margin-top:5pxpx; line-height: 14px}
+#blog .textoT{margin-left:10px;font-family: 'Titillium Web';font-size: 14px;color:#31b9d3;font-weight: bold;  margin-top:5pxpx; line-height: 14px}
 #blog .textoT .small{font-size: 10px}
 
 /*Footer*/
@@ -204,13 +204,15 @@ footer .address{border-left: 2px solid #080808;border-right: 2px solid #080808;h
 footer .address p{color:#080808;font-size: 10px}
 footer .address p.autospazio{font-size: 16px;font-weight: bold;margin-top: 25px;line-height: 25px}
 footer .parners{height:91px;width:325px;float: left;margin-top: 12px;margin-left: 15px}
-footer .social{float: right;position: relative;margin-right: 30px;margin-top:29px;width: 200px}
-footer .footer{margin-left: 107px;margin-top:11px;width: 97px;float: left;}
+footer .social{float: right;position: relative;margin-right: 30px;margin-top:15px;width: 235px}
+footer .footer{margin-left: 107px;margin-top:11px;width: 82px;float: left;}
 footer .container{width: 1280px;margin: 0px auto}
-footer .social a.left{float: left;}
+footer .social a.left{float: left;margin-top: 8px}
 footer .social p{color: #FFFEFF;font-size: 11px;padding-left: 10px}
 footer .social p a{color: #FFFEFF}
-footer .facebook{background: url(./img/facebookfooter.png);width: 28px;height: 29px;display: block;background-size: 28px 28px;margin-right: 13px}
-footer .twitter{background: url(./img/twitterfooter.png);width: 31px;height: 31px;display: block;background-size: 31px 31px;margin-right: 12px}
-footer .pinterest{background: url(./img/pinterestfooter.png);width: 31px;height: 31px;display: block;background-size: 31px 31px;margin-right: 7px}
+footer .social .email{color: #0C0C0C;font-size: bold;font-family: 'Titillium Web';font-weight: bold;font-size: 14px}
+footer .facebook{background: url(./img/facebookfooter.png);width: 28px;height: 26px;display: block;background-size: 28px 28px;margin-right: 13px;margin-left: 21px}
+footer .twitter{background: url(./img/twitterfooter.png);width: 35px;height: 32px;display: block;background-size: 31px 31px;margin-right: 12px}
+footer .pinterest{background: url(./img/pinterestfooter.png);width: 35px;height: 31px;display: block;background-size: 31px 31px;margin-right: 7px}
 footer .plus{background: url(./img/plusfooter.png);width: 20px;height: 20px;display: block;margin-top: 4px;background-size: 20px 20px}
+footer .copy-right{text-align: right;margin-right: 85px;font-size: 12px;margin-top: 10px;color: #ABABAB}

@@ -7,8 +7,7 @@
 	<link href='<?php bloginfo('template_directory')?>/css/jquery.ui.css' rel='stylesheet'/>
 	<link href='<?php bloginfo( 'stylesheet_url' ); ?>' rel='stylesheet'/>
 	<title><?php single_post_title(); ?></title>
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,700,100italic,300italic,400italic,900,700italic,900italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet'>
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,900' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/img/favicon.ico" type="image/x-icon"/>
 
 	<?php wp_head(); ?>	

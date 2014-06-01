@@ -11,17 +11,19 @@
 
 	</div>	
 	<div class='social'>
+		<a href='#' class='email'>contacto@autospazio.com</a>
+		<div class='clear'></div>
 		<a href='https://www.facebook.com/pages/AutoSpazio-Mexico/143719422343014?fref=ts' target="_blank" class='facebook left'></a>
 		<a href='https://twitter.com/Autospazio' target="_blank" class='twitter left'></a>
 		<a href='#' class='pinterest left'></a>
 		<a href='#' class='plus left'></a>
 		<div class='clear'></div>
-		<br />
-		<p>Copyright <a href='http://www.rankeauno.com/'>RankeaUno</a> 2014</p>
 	</div>
 
 </div>
 <div class='black-line'></div>
+<div class='clear'></div>
+<div class='container'><p class='copy-right'>Copyright Rankeauno 2014</p></div>
 </footer>
 	<?php $pagename = get_query_var('pagename');?>
 	<?php if ($pagename != 'galeria'){ ?>
