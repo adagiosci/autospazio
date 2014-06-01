@@ -24,8 +24,8 @@ header{height: 105px;box-shadow: 0px 5px 10px #888888;z-index: 2;position: relat
 header .container{width: 1114px}
 header .black-line{width: 100%;height: 3px;background-color: #080808;display: block;position: absolute;top:72px;}
 header nav{position: relative;top:74px;width: 1114px;margin: 0px auto}
-header nav a{float: left;color:#383838;font-weight: bold;margin: 0px 54px 0px 0px}
-header nav a.on{background-color: #080808;color:white;padding: 3px 10px;margin-left: -15px}
+header nav a{float: left;color:#383838;font-weight: bold;margin: 0px 74px 0px 0px}
+header nav a.on{background-color: #080808;color:white;padding: 1px 10px;margin-left: -15px}
 header nav a.logo{display: block;height: 1px;width: 185px;margin: 0px 75px 0px 78px}
 header nav a.logo img{position: absolute;width: 117px;top:-54px;}
 header nav li a.last{margin-right: 0px}

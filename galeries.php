@@ -35,9 +35,8 @@ document.oncontextmenu = function(){return false}
 		}
 		echo "</select>";
 		?>
-		<input type='submit' value='Buscar'/>
 		<!-- inicio filtro por tags -->
-	    <input type="text" name='etiqueta'></br>
+	    <input type="text" name='etiqueta'>
 		<input type='submit' value='Buscar'/>
 		<!-- fin filtro por tags -->
 	</form>
@@ -65,10 +64,10 @@ document.oncontextmenu = function(){return false}
 		}
 		
 		/*se crea la vista segun la galeria seleccionada por el usuario*/
-     echo do_shortcode('[nggallery id='.$mostrar.' override_thumbnail_settings="1" thumbnail_width="240" thumbnail_height="180" thumbnail_crop="1" show_slideshow_link="0"]');
+     echo do_shortcode('[nggallery id='.$mostrar.' override_thumbnail_settings="1" thumbnail_width="178" thumbnail_height="178" thumbnail_crop="1" show_slideshow_link="0"]');
 } else {/*en caso contrario se genera la galeria de todas las imagenes*/
 	$etiquetita = $_POST['etiqueta']; /*aqui recibimos la etiqueta a buscar del form etiqueta y se la pasamos a nggtags para que genere la galeria*/
-	echo do_shortcode('[nggtags gallery='.$etiquetita.' override_thumbnail_settings="1" thumbnail_width="240" thumbnail_height="180" thumbnail_crop="1" show_slideshow_link="0"]');
+	echo do_shortcode('[nggtags gallery='.$etiquetita.' override_thumbnail_settings="1" thumbnail_width="178" thumbnail_height="178" thumbnail_crop="1" show_slideshow_link="0"]');
 	}
 		
 ?>
