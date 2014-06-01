@@ -54,6 +54,8 @@ function home_banner_func($attrs,$content = ""){
 			<a href='#' class='arrow-right'></a>
 		</div>
 		<div class='clear'></div>
+		<div class='big-black'></div>
+		<div class='clear'></div>
 	</div>";
 }
 function home_content_func($attrs,$content = ""){
