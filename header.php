@@ -9,7 +9,6 @@
 	<title><?php single_post_title(); ?></title>
 	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,900' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/img/favicon.ico" type="image/x-icon"/>
-
 	<?php wp_head(); ?>	
 </head>
 <body>
