@@ -36,11 +36,13 @@ Follow variables are useable :
 	
 	<!-- Thumbnails -->
     <?php $i = 0; ?>
+     <?php $_x = 1; ?>
 	<?php foreach ( $images as $image ) : ?>
 	
-	<div id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box" <?php echo $image->style ?> >
+	<div id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box <?php if($_x == 6){ echo 'last';$_x=0;}  ?>" <?php echo $image->style ?> >
 		<div class="ngg-gallery-thumbnail" >
-			<a href="<?php echo nextgen_esc_url($image->imageURL) ?>"
+
+			<a href="<?php echo nextgen_esc_url($image->imageURL) ?>" 
                title="<?php echo esc_attr($image->description) ?>"
                data-src="<?php echo nextgen_esc_url($image->imageURL); ?>"
                data-thumbnail="<?php echo nextgen_esc_url($image->thumbnailURL); ?>"
@@ -48,11 +50,14 @@ Follow variables are useable :
                data-title="<?php echo esc_attr($image->alttext); ?>"
                data-description="<?php echo esc_attr($image->description); ?>"
                <?php echo $image->thumbcode ?> >
-				<?php if ( !$image->hidden ) { ?>
+			<?php if ( !$image->hidden ) { ?>
 				<img title="<?php echo esc_attr($image->alttext) ?>" alt="<?php echo esc_attr($image->alttext) ?>" src="<?php echo nextgen_esc_url($image->thumbnailURL) ?>" <?php echo $image->size ?> />
-				<?php } ?>
+			<?php } ?>
+			<span class='thumbnail-info'></span>
+			<span class='info-title'><?php echo esc_attr($image->alttext); ?></span>
+			<span class='info-line'></span>
+			<span class='info-description'><?php echo esc_attr($image->description); ?></span>
 			</a>
-			<div class='thumbnail-info'></div>
 		</div>
 	</div>
 
@@ -63,6 +68,7 @@ Follow variables are useable :
         <?php endif; ?>
     <?php endif; ?>
     <?php $i++; ?>
+     <?php $_x++; ?>
 
  	<?php endforeach; ?>
  	

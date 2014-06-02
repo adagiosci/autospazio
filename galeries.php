@@ -61,11 +61,13 @@ document.oncontextmenu = function(){return false}
 	
 		}
 		
+		$v = 18;
+
 		/*se crea la vista segun la galeria seleccionada por el usuario*/
-     echo do_shortcode('[nggallery template="autospazio" ngg_force_update=8 id='.$mostrar.' override_thumbnail_settings="1" thumbnail_width="178" thumbnail_height="178" thumbnail_crop="1" show_slideshow_link="0"]');
+     echo do_shortcode('[nggallery template="autospazio" ngg_force_update=23 id='.$mostrar.' override_thumbnail_settings="1" thumbnail_width="174" thumbnail_height="174" thumbnail_crop="1" show_slideshow_link="0"]');
 } else {/*en caso contrario se genera la galeria de todas las imagenes*/
 	$etiquetita = $_GET['tag']; /*aqui recibimos la etiqueta a buscar del form etiqueta y se la pasamos a nggtags para que genere la galeria*/
-	echo do_shortcode('[nggtags template="autospazio" ngg_force_update=8 gallery='.$etiquetita.' override_thumbnail_settings="1" thumbnail_width="178" thumbnail_height="178" thumbnail_crop="1" show_slideshow_link="0"]');
+	echo do_shortcode('[nggtags template="autospazio" ngg_force_update=23 gallery='.$etiquetita.' override_thumbnail_settings="1" thumbnail_width="174" thumbnail_height="174" thumbnail_crop="1" show_slideshow_link="0"]');
 	}
 		
 ?>
