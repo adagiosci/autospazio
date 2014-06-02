@@ -3,7 +3,9 @@
 	Template Name: GALERIES
 */
 ?>
-
+<?php
+	echo $_GET['tags'];
+?>
 <script language="Javascript"> 
 document.oncontextmenu = function(){return false} 
 </script>
@@ -14,14 +16,14 @@ document.oncontextmenu = function(){return false}
 	<h1>GALERÍAS</h1>
 	<div class='dot-points'></div>
 	<div> <!-- en action para produccion se pone /galeria/ o el nombre de la pagina que usa este template -->
-	<form  method="post" action="/galeria/">
+	<form  method="get" action="/galeria/">
 		<?php /*aqui hacemos la consulta de las galerias y las visualizamos en un combobox*/
 		global $wpdb;
 		$customers = $wpdb->get_results("SELECT gid,name FROM wp_ngg_gallery;");
 		/*la variable selección guardará el valor de seleccion del dropdown menu y asi mostrará el seleccionado*/
-		$seleccion = $_POST['select'];
+		$seleccion = $_GET['gallery'];
 		
-		echo "<select name='select'>";
+		echo "<select name='gallery'>";
 		//echo "<option value='"Seleccionar Galeria"'>"Seleccionar Galeria"</option> ";
 		echo "<option value=''>Seleccionar Galería</option>";
 			
@@ -36,7 +38,7 @@ document.oncontextmenu = function(){return false}
 		echo "</select>";
 		?>
 		<!-- inicio filtro por tags -->
-	    <input type="text" name='etiqueta'>
+	    <input type="text" name='tag'>
 		<input type='submit' value='Buscar'/>
 		<!-- fin filtro por tags -->
 	</form>
@@ -52,9 +54,9 @@ document.oncontextmenu = function(){return false}
 	
 	/*se hace una verificación si se presionó el boton IR entra al if sino se va al else*/
 	
-		if(!empty($_POST['select'])){
+		if(!empty($_GET['gallery'])){
     /*.. aqui se hace la vista segun la selección de la galería... */
-    $select = $_POST['select'];
+    $select = $_GET['gallery'];
     $galeria = $wpdb->get_results("SELECT gid,name FROM wp_ngg_gallery WHERE name='$select';");
   
     foreach ($galeria as $gal){
@@ -66,7 +68,7 @@ document.oncontextmenu = function(){return false}
 		/*se crea la vista segun la galeria seleccionada por el usuario*/
      echo do_shortcode('[nggallery id='.$mostrar.' override_thumbnail_settings="1" thumbnail_width="178" thumbnail_height="178" thumbnail_crop="1" show_slideshow_link="0"]');
 } else {/*en caso contrario se genera la galeria de todas las imagenes*/
-	$etiquetita = $_POST['etiqueta']; /*aqui recibimos la etiqueta a buscar del form etiqueta y se la pasamos a nggtags para que genere la galeria*/
+	$etiquetita = $_GET['tag']; /*aqui recibimos la etiqueta a buscar del form etiqueta y se la pasamos a nggtags para que genere la galeria*/
 	echo do_shortcode('[nggtags gallery='.$etiquetita.' override_thumbnail_settings="1" thumbnail_width="178" thumbnail_height="178" thumbnail_crop="1" show_slideshow_link="0"]');
 	}
 		

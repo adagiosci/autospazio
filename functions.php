@@ -6,6 +6,14 @@ add_shortcode('about_us_image','about_us_image_func');
 add_shortcode('about_us_contenido','about_us_contenido_func');
 add_shortcode('home_content','home_content_func');
 add_shortcode('home_banner','home_banner_func');
+
+add_filter( 'query_vars', 'addnew_query_vars');
+function addnew_query_vars($vars)
+{   
+    $vars[] = 'var1'; // var1 is the name of variable you want to add       
+    return $vars;
+}
+
 function register_menus() {
 	register_nav_menus(array(
 		'header-menu' => __('Header Menu'),
