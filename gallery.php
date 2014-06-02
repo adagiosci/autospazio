@@ -3,50 +3,73 @@
 	Template Name: GALLERY
 */
 ?>
-<?php get_header(); ?>
-<div id='gallery'>
-<div class='container-galleries'>
-	<h1>GALERÍAS</h1>
-	<div class='dot-points'></div>
-	<div class="select-form">
-	<form  method="post" action="/galeria/">
-		<?php
-		global $wpdb;
-		$customers = $wpdb->get_results("SELECT gid,name FROM wp_ngg_gallery;");
-		/*print_r($customers);*/
-		echo "<select name='select' id='gallery_select'>";
-		foreach ($customers as $customer){
-			echo "<option value = '".$customer->name."'>".$customer->name."</option>"; 
-			/*echo $customer->gid;
-			echo $customer->name;*/
-		}
-		echo "</select>";
-		?>
-		<input type='submit' value='Buscar'/>
-	
-	</form>
-	
-	</div>
-	<?php	/*aqui recibimos la opcion del combobox y hacemos la busqueda para sacar el id*/
-	global $wpdb;
-	
-	if(!empty($_POST['select'])){
-    /*.. do your query section... */
-    $select = $_POST['select'];
-    $galeria = $wpdb->get_results("SELECT gid FROM wp_ngg_gallery WHERE name='$select';");
-    echo $select;
-    foreach ($galeria as $gal){
-		echo $gal->gid;
-		$mostrar = $gal->gid;
-		}
-   //echo do_shortcode('[nggallery id='$select' override_thumbnail_settings="1" thumbnail_width="240" thumbnail_height="180" thumbnail_crop="1" show_slideshow_link="0"]');
-   //echo $gal
-} ?>
-	<?php /*se pone el shortcode de nextgen para hacer el filtrado por tag*/
-	echo do_shortcode('[nggallery id='.$mostrar.' override_thumbnail_settings="1" thumbnail_width="240" thumbnail_height="180" thumbnail_crop="1" show_slideshow_link="0"]');
-	 echo $mostrar;
-	?>
+<?php //get_header(); ?>
+<?php
+/**
+Template Page for the gallery overview with DOWNLOAD LINKS for photos; requires force-download.php
+ 
+Follow variables are useable :
+ 
+        $gallery     : Contain all about the gallery
+        $images      : Contain all images, path, title
+        $pagination  : Contain the pagination content
+ 
+ You can check the content when you insert the tag <?php var_dump($variable) ?>
+ If you would like to show the timestamp of the image ,you can use <?php echo $exif['created_timestamp'] ?>
+**/
+
+echo "gallery: ".$gallery;
+
+?>
+<?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?><?php if (!empty ($gallery)) : ?>
+ 
+<div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
+ 
+<?php if ($gallery->show_slideshow) { ?>
+        <!-- Slideshow link -->
+        <div class="slideshowlink">
+                <a class="slideshowlink" href="<?php echo $gallery->slideshow_link ?>">
+                        <?php echo $gallery->slideshow_link_text ?>
+                </a>
+        </div>
+<?php } ?>
+ 
+<?php if ($gallery->show_piclens) { ?>
+        <!-- Piclense link -->
+        <div class="piclenselink">
+                <a class="piclenselink" href="<?php echo $gallery->piclens_link ?>">
+                        <?php _e('[View with PicLens]','nggallery'); ?>
+                </a>
+        </div>
+<?php } ?>
+       
+<h1><?php echo $gallery->description ?></h1>
+<p><a class="block-button button-nb" title="regresar" href="../">Regresar a Categorías</a></p><br />
+        <!-- Thumbnails -->
+        <?php foreach ( $images as $image ) : ?>
+       
+        <div id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box" <?php echo $image->style ?> >
+                <div class="ngg-gallery-thumbnail" >
+                        <a href="<?php echo $image->imageURL ?>" title="<?php echo $image->alttext ?>" <?php echo $image->thumbcode ?> > <!-- changed title description to alttext NB -->
+ 
+                                <?php if ( !$image->hidden ) { ?>
+                                <img title="<?php echo $image->alttext ?>" alt="<?php echo $image->alttext ?>" src="<?php echo $image->thumbnailURL ?>" <?php echo $image->size ?> />
+                                <?php } ?>
+                        </a>
+<!-- ADD DOWNLOAD LINK, changed image-caption to image-alttext   -->
+<span><?php echo $image->alttext ?><br /><?php if ($image->caption!=" "){echo $image->caption ?> <?php }; ?><a href=" <?php home_url(); ?> /force-download.php?file=<?php echo substr(parse_url($image->imageURL,PHP_URL_PATH),1); ?> ">Download</a></span>
+                </div>
+        </div>
+        <?php if ( $image->hidden ) continue; ?>
+        <?php if ( $gallery->columns > 0 && ++$i % $gallery->columns == 0 ) { ?>
+        <br style="clear: both" />
+        <?php } ?>
+        <?php endforeach; ?>
+       
+        <!-- Pagination -->
+        <?php echo $pagination ?>
+       
 </div>
-<div class='clear'></div>
-</div>
-<?php get_footer(); ?>
+ 
+<?php endif; ?>
+<?php //get_footer(); ?>
