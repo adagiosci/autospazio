@@ -23,7 +23,8 @@ Follow variables are useable :
 	<div class="ngg-album-compact">
 		<div class="ngg-album-compactbox">
 			<div class="ngg-album-link">
-				<a class="Link" href="<?php echo nextgen_esc_url($gallery->pagelink) ?>">
+				<!-- <a class="Link" href="<?php echo nextgen_esc_url($gallery->pagelink) ?>"> -->
+				<a class="Link" href="nggallery/page/1?gallery=<?= $gallery->name ?>">
 					<img class="Thumb" alt="<?php echo esc_attr($gallery->title) ?>" src="<?php echo nextgen_esc_url($gallery->previewurl) ?>"/>
 					<span class='thumbnail-info'></span>
 					<span class='info-title'><?php echo esc_attr($gallery->title) ?></span>

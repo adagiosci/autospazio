@@ -15,15 +15,7 @@ Follow variables are useable :
 <?php if (!defined ('ABSPATH')) die ('No direct access allowed'); ?><?php if (!empty ($gallery)) : ?>
 
 <div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
-
-<?php if ($gallery->show_slideshow) { ?>
-	<!-- Slideshow link -->
-	<div class="slideshowlink">
-		<a class="slideshowlink" href="<?php echo nextgen_esc_url($gallery->slideshow_link) ?>">
-			<?php echo $gallery->slideshow_link_text ?>
-		</a>
-	</div>
-<?php } ?>
+<!-- Slideshow link aqui va el codigo -->
 
 <?php if ($gallery->show_piclens) { ?>
 	<!-- Piclense link -->
