@@ -16,6 +16,14 @@ Follow variables are useable :
 
 <div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
 <!-- Slideshow link aqui va el codigo -->
+<?php if ($gallery->show_slideshow) { ?>
+	<!-- Slideshow link -->
+	<div class="slideshowlink">
+		<a class="slideshowlink" href="<?php echo $gallery->slideshow_link ?>">
+			<?php echo $gallery->slideshow_link_text ?>
+		</a>
+	</div>
+<?php } ?>
 
 <?php if ($gallery->show_piclens) { ?>
 	<!-- Piclense link -->
@@ -35,7 +43,7 @@ Follow variables are useable :
 		<div class="ngg-gallery-thumbnail" >
 
 			<a href="<?php echo nextgen_esc_url($image->imageURL) ?>" 
-               title="<?php echo esc_attr($image->description) ?>"
+               title="<?php echo ' Link:'.esc_attr($image->imageURL).' <br />'.esc_attr($image->description) ?>"
                data-src="<?php echo nextgen_esc_url($image->imageURL); ?>"
                data-thumbnail="<?php echo nextgen_esc_url($image->thumbnailURL); ?>"
                data-image-id="<?php echo esc_attr($image->pid); ?>"
@@ -48,6 +56,7 @@ Follow variables are useable :
 			<span class='thumbnail-info'></span>
 			<span class='info-title'><?php echo esc_attr($image->alttext); ?></span>
 			<span class='info-line'></span>
+			
 			<span class='info-description'><?php echo esc_attr($image->description); ?></span>
 			</a>
 		</div>
