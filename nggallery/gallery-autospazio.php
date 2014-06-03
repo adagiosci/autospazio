@@ -55,7 +55,7 @@ Follow variables are useable :
 			<?php if ( !$image->hidden ) { ?>
 				<img title="<?php echo esc_attr($image->alttext) ?>" alt="<?php echo esc_attr($image->alttext) ?>" src="<?php echo nextgen_esc_url($image->thumbnailURL) ?>" <?php echo $image->size ?> />
 			<?php } ?>
-			<span class='thumbnail-info'></span>
+			
 			<span class='info-title'><?php echo esc_attr($image->alttext); ?></span>
 			<span class='info-line'></span>
 			
