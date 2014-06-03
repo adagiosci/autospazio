@@ -41,9 +41,11 @@ Follow variables are useable :
 	
 	<div id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box <?php if($_x == 6){ echo 'last';$_x=0;}  ?>" <?php echo $image->style ?> >
 		<div class="ngg-gallery-thumbnail" >
-
+				<?php 
+				$linkito = "http://www.facebook.com/sharer.php?u=";
+				?>
 			<a href="<?php echo nextgen_esc_url($image->imageURL) ?>" 
-               title="<?php echo ' Link:'.esc_attr($image->imageURL).' <br />'.esc_attr($image->description) ?>"
+               title="<?php echo ' <a href='.$linkito.esc_attr($image->imageURL).' > compartir</a> '.' <br />'.esc_attr($image->description)?>"
                data-src="<?php echo nextgen_esc_url($image->imageURL); ?>"
                data-thumbnail="<?php echo nextgen_esc_url($image->thumbnailURL); ?>"
                data-image-id="<?php echo esc_attr($image->pid); ?>"
