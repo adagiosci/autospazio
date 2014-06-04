@@ -1,3 +1,9 @@
+<script type="text/javascript">
+	function jsOnclick(object){
+		window.open(object.href, object.target, 'width=700,height=400');
+		return false;
+	}
+</script>
 <?php 
 /**
 Template Page for the gallery overview
@@ -16,6 +22,14 @@ Follow variables are useable :
 
 <div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
 <!-- Slideshow link aqui va el codigo -->
+<?php if ($gallery->show_slideshow) { ?>
+	<!-- Slideshow link -->
+	<div class="slideshowlink">
+		<a class="slideshowlink" href="<?php echo $gallery->slideshow_link ?>">
+			<?php echo $gallery->slideshow_link_text ?>
+		</a>
+	</div>
+<?php } ?>
 
 <?php if ($gallery->show_piclens) { ?>
 	<!-- Piclense link -->
@@ -33,12 +47,9 @@ Follow variables are useable :
 	
 	<div id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box <?php if($_x == 6){ echo 'last';$_x=0;}  ?>" <?php echo $image->style ?> >
 		<div class="ngg-gallery-thumbnail" >
-
-
 <!-- <a href="http://www.facebook.com/sharer.php?u=http://localhost/wp-content/gallery/fiesta/DSCN4301.JPG" target="_blank" onClick="window.open(this.href, this.target, 'width=700,height=400'); return false;"><img src="http://localhost/wp-content/uploads/2014/06/share.png"/></a> -->
-
 			<a href="<?php echo nextgen_esc_url($image->imageURL) ?>" 
-               title="<a href='http://www.facebook.com/sharer.php?u=<?= esc_attr($image->imageURL) ?>' target='_blank'>Compartir en Facebook</a>"
+               title="<a href='http://www.facebook.com/sharer.php?u=<?= esc_attr($image->imageURL) ?>' target='_blank' onClick='jsOnclick(this); return false' >Compartir en Facebook</a>"
                data-src="<?php echo nextgen_esc_url($image->imageURL); ?>"
                data-thumbnail="<?php echo nextgen_esc_url($image->thumbnailURL); ?>"
                data-image-id="<?php echo esc_attr($image->pid); ?>"
@@ -48,7 +59,7 @@ Follow variables are useable :
 			<?php if ( !$image->hidden ) { ?>
 				<img title="<?php echo esc_attr($image->alttext) ?>" alt="<?php echo esc_attr($image->alttext) ?>" src="<?php echo nextgen_esc_url($image->thumbnailURL) ?>" <?php echo $image->size ?> />
 			<?php } ?>
-			<span class='thumbnail-info'></span>
+			<span class='thumbnail-info'><?php echo esc_attr($image->description); ?></span>
 			<span class='info-title'><?php echo esc_attr($image->alttext); ?></span>
 			<span class='info-line'></span>
 			<span class='info-description'><?php echo esc_attr($image->description); ?></span>

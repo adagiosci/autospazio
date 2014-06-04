@@ -66,7 +66,7 @@
 
 		/*se crea la vista segun la galeria seleccionada por el usuario*/
 		//if($pos !== False){
-     			echo do_shortcode('[nggallery template="autospazio" ngg_force_update=35 id='.$mostrar.' override_thumbnail_settings="1" thumbnail_width="174" thumbnail_height="174" thumbnail_crop="1" show_slideshow_link="0"]');
+     			echo do_shortcode('[nggallery template="autospazio" ngg_force_update=48 id='.$mostrar.' override_thumbnail_settings="1" thumbnail_width="174" thumbnail_height="174" thumbnail_crop="1" show_slideshow_link="0"]');
      		//}else{
 
      		//	echo do_shortcode('[album template="autospazio" ngg_force_update=7]﻿');
@@ -82,10 +82,11 @@
 	}else{
 		if (!empty($_GET['tag'])){
 			//echo $etiquetita;
-			echo do_shortcode('[nggtags template="autospazio" ngg_force_update=35 gallery="'.$etiquetita.'" override_thumbnail_settings="1" thumbnail_width="174" thumbnail_height="174" thumbnail_crop="1" show_slideshow_link="0"]');	
+			echo do_shortcode('[nggtags template="autospazio" ngg_force_update=48 gallery="'.$etiquetita.'" override_thumbnail_settings="1" thumbnail_width="174" thumbnail_height="174" thumbnail_crop="1" show_slideshow_link="0"]');	
 			//echo do_shortcode('[album template="autospazio" ngg_force_update=4]﻿');
 			}else {
 				echo do_shortcode('[album template="autospazio" ngg_force_update=9]﻿');
+
 				//echo $etiquetita;
 				//echo do_shortcode('[nggtags template="autospazio" ngg_force_update=24 gallery="'.$etiquetita.'" override_thumbnail_settings="1" thumbnail_width="174" thumbnail_height="174" thumbnail_crop="1" show_slideshow_link="0"]');	
 				}
