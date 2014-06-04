@@ -25,13 +25,10 @@
 <div class='clear'></div>
 <div class='container'><p class='copy-right'>Copyright Rankeauno 2014</p></div>
 </footer>
-	<?php $pagename = get_query_var('pagename');?>
-	<?php if ($pagename != 'galeria'){ ?>
-		<script src='<?php bloginfo('template_directory') ?>/js/jquery.js' ></script>
-		<script src='<?php bloginfo('template_directory') ?>/js/jquery.ui.js'></script>
-		<script src='<?php bloginfo('template_directory') ?>/js/jquery.validate.js'></script>
-		<script src='<?php bloginfo('template_directory') ?>/js/jQuery.migrate.min.js'></script>
-		<script src='<?php bloginfo('template_directory') ?>/js/interactions.js'></script>
-	<?php } ?>
+	<script src='<?php bloginfo('template_directory') ?>/js/jquery.js' ></script>
+	<script src='<?php bloginfo('template_directory') ?>/js/jQuery.migrate.min.js'></script>
+	<script src='<?php bloginfo('template_directory') ?>/js/jquery.ui.js'></script>
+	<script src='<?php bloginfo('template_directory') ?>/js/jquery.validate.js'></script>
+	<script src='<?php bloginfo('template_directory') ?>/js/interactions.js'></script>
 </body>
 </html>

@@ -9,7 +9,25 @@
 	<title><?php single_post_title(); ?></title>
 	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,900' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/img/favicon.ico" type="image/x-icon"/>
-	<?php wp_head(); ?>	
+	<?php wp_head(); ?>
+	<script type="text/javascript">
+		jQuery(function($) {
+    			var nextgen_fancybox_init = function() {
+    			var selector = nextgen_lightbox_filter_selector($, $(".ngg-fancybox"));
+        		selector.fancybox({
+            		titlePosition: 'inside',
+            		// Needed for twenty eleven
+            		onComplete: function() {
+            			href = $(this).attr('href');
+            			$('#fancybox-title').prepend("<a href='http://www.facebook.com/sharer.php?u=" + href + " target='_blank' onClick='jsOnclick(this); return false' >Compartir en Facebook</a>");
+                			$('#fancybox-wrap').css('z-index', 10000);
+            		}
+        		});
+   		 	};
+   			$(this).bind('refreshed', nextgen_fancybox_init);
+    			nextgen_fancybox_init();
+		});	
+	</script>	
 </head>
 <body>
 	<input type='hidden' value='<?php bloginfo('template_directory'); ?>' id='template_directory'>
@@ -19,7 +37,7 @@
 	<div class='container'>
 	<nav>
 		<ul>
-		<?php 
+			<?php 
 			$menus = wp_get_nav_menu_items("Header",array('order'=>'menu_order'));
 			$i = 0;
 			$total = count($menus);
