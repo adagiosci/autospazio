@@ -19,7 +19,7 @@
             		// Needed for twenty eleven
             		onComplete: function() {
             			href = $(this).attr('href');
-            			$('#fancybox-title').prepend("<a href='http://www.facebook.com/sharer.php?u=" + href + " target='_blank' onClick='jsOnclick(this); return false' >Compartir en Facebook</a>");
+            			$('#fancybox-title').prepend("<a href='http://www.facebook.com/sharer.php?u=" + href + "' target='_blank' onClick='jsOnclick(this); return false' >Compartir en Facebook</a>");
                 			$('#fancybox-wrap').css('z-index', 10000);
             		}
         		});
