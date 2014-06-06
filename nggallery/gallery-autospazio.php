@@ -4,6 +4,10 @@
 		return false;
 	}
 </script>
+<script type="text/javascript">
+	$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox();
+</script>
+
 <?php 
 /**
 Template Page for the gallery overview
@@ -47,7 +51,7 @@ Follow variables are useable :
 	
 	<div id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box <?php if($_x == 6){ echo 'last';$_x=0;}  ?>" <?php echo $image->style ?> >
 		<div class="ngg-gallery-thumbnail" >
-			<!-- <a href='http://www.facebook.com/sharer.php?u=<?= esc_attr($image->imageURL) ?>' target='_blank' onClick='jsOnclick(this); return false' >Compartir en Facebook</a> -->
+			
 			<a href="<?php echo nextgen_esc_url($image->imageURL) ?>" 
                title="<?php echo esc_attr($image->title); ?>"
                data-src="<?php echo nextgen_esc_url($image->imageURL); ?>"
