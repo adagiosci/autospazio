@@ -37,20 +37,16 @@
 					<?php the_content(); ?>
 				<?php endwhile; endif;?>
 			</div>
-			<div class='direccion'>
-				<p>Armistice Building</p>
-				<p>Kuningan Raya Street</p>
-				<p>Jakarta, JKT 1220</p>
-				<p>PO BOX 1234</p>
-			</div>
+			<p class='direccion'>
+					<?= preg_replace("/\n/","<br/>",get_post_meta(get_the_ID(),"direccion",true)); ?>
+			</p>
 
-			<div class='telefonos'>
-				<p>Phone: + 621 55566671</p>
-			</div>
-			<div class='hours'>
-				<p>Mon-Fri: 8:00 until 17:00</p>
-				<p>Sat: 10:00 until 16:00</p>
-			</div>			
+			<p class='telefonos'>
+				<?= preg_replace("/\n/","<br/>",get_post_meta(get_the_ID(),"telefono",true)); ?>
+			</p>
+			<p class='hours'>
+				<?= preg_replace("/\n/","<br/>",get_post_meta(get_the_ID(),"hora",true)); ?>
+			</p>			
 		</div>
 		</div>
 	</section>

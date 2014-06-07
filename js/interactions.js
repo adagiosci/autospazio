@@ -7,7 +7,7 @@ var aux;
 $(document).ready(function(e){
 
 	var size_img = $("#home .banner img").size()
-	$("#home .banner img").eq(size_img-1).addClass('on')
+	$("#home .banner img").eq(0).addClass('on')
 	var height = $("#home .banner img").eq(size_img-1).attr('height')
 	height = Number(height) + 7;
 	$("#home .banner").height(height)
