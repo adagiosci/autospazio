@@ -11,10 +11,8 @@ $(document).ready(function(e){
 	var height = $("#home .banner img").eq(size_img-1).attr('height')
 	height = Number(height) + 7;
 	$("#home .banner").height(height)
-	// timer_banner_1=setTimeout("init_move_banner1()",6000);
+	timer_banner_1=setTimeout("init_move_banner1()",6000);
 
-
-        
       $("#contact #form1").submit(function(e){
             e.preventDefault();
             $.post($(this).attr("action"),{

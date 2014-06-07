@@ -10,6 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,900' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/img/favicon.ico" type="image/x-icon"/>
 	<?php wp_head(); ?>
+	<?php if (get_query_var('pagename') =='galeria' ){ ?>
 	<script type="text/javascript">
 		jQuery(function($) {
     			var nextgen_fancybox_init = function() {
@@ -27,7 +28,8 @@
    			$(this).bind('refreshed', nextgen_fancybox_init);
     			nextgen_fancybox_init();
 		});	
-	</script>	
+	</script>
+	<?php } ?>	
 </head>
 <body>
 	<input type='hidden' value='<?php bloginfo('template_directory'); ?>' id='template_directory'>

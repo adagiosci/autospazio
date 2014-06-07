@@ -2,6 +2,7 @@
 add_action('init','register_menus');
 add_theme_support('post-thumbnails' );
 add_shortcode('service_info','service_info_func');
+add_shortcode('about_us_banner','about_us_banner_func');
 add_shortcode('about_us_image','about_us_image_func');
 add_shortcode('about_us_contenido','about_us_contenido_func');
 add_shortcode('home_content','home_content_func');
@@ -37,13 +38,19 @@ function service_info_func($attrs,$content = ""){
 		</div>
 	";
 }
+
+/*About us Banner*/
+
+function about_us_banner_func($attrs,$content = ""){
+	return "<div class='banner'>$content</div><div class='content'>";
+}
 function about_us_contenido_func($attrs,$content = ""){
 	return "<div class='contenido'>$content</div>";
 }
 function about_us_image_func($attrs,$content = ""){
-	return "<div class='image'>$content</div>";
+	return "<div class='image'>$content</div></div>";
 }
-/*Homa functions*/
+/*Home functions*/
 function home_banner_func($attrs,$content = ""){
 	$dir = get_bloginfo('template_directory');
 	return "

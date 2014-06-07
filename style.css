@@ -35,8 +35,8 @@ header nav li a.last{margin-right: 0px}
 #home{}
 #home .banner{height: auto;overflow: hidden;position: relative;width: 100%;max-width:1280px;margin: 0px auto;position: relative;}
 #home .banner p{height: 710px}
-#home .banner img{margin: 0px auto;width: 100%;top:0px;display: block;position: absolute;z-index: 0}
-#home .banner img.on{z-index: 1}
+#home .banner img{margin: 0px auto;width: 100%;top:0px;display: none;position: absolute;z-index: 0}
+#home .banner img.on{z-index: 1;display: block;}
 #home .banner .big-black{width: 100%;height: 7px;background: black;bottom: 0px;display: block;position: absolute;}
 #home .mini-images{width: 1282px;margin: 0px auto}
 #home .mini-images img.slide1{width: 426px}
@@ -61,8 +61,8 @@ header nav li a.last{margin-right: 0px}
 #about-us{}
 #about-us .content{width: 1280px;margin: 0px auto;padding-bottom: 10px;margin-top: 4px}
 #about-us .contenido {margin-left: 88px;text-align: left;float: left;width: 552px;}
-#about-us .banner{width: auto;padding-bottom: 2px;height: 376px;overflow: hidden;position: relative;width: 1280px;margin: 0px auto 15px}
-#about-us .banner img{margin: 0px auto;width: 1280px;display: block;position: relative;top:-6px;}
+#about-us .banner{width: auto;padding-bottom: 2px;height: 376px;overflow: hidden;position: relative;width: 1280px;margin: -5px auto 15px}
+#about-us .banner img{margin: 0px auto;width: 1280px;display: block;position: relative;}
 #about-us .imagen {margin-left: 30px;float: left;width: 50%;}
 #about-us .aboutus{}
 #about-us .titleabout{font-weight: bolder;font-size: 18px;letter-spacing: 0.5px;color:#141414;margin-bottom: 5px;margin-top: 3px}
