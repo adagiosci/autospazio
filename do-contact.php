@@ -8,13 +8,17 @@ function send_email($to,$subject,$message,$from,$from_name){
 		$mailit = mail($to,$subject,$message,$headers);
 		return $mailit;
 	}
-	$to = "irving.sci@gmail.com";
+	$to = "contacto@autospazio.com";
+	//$to = "irving.sci@gmail.com";
+	$message = "nombre: {$_POST['Name']} <br />
+			mail: {$_POST['Email']} <br />
+			asunto: {$_POST['subject']} <br />";			
 	if($_POST['subject']!=""&&$_POST['Message']!=""&&$_POST['Email']!=""&&$_POST['Name']!=""){
-		$subject = $_POST['subject'];
-		$message = $_POST['Message'];
+		$subject = $_POST['subject'].'- www.autospazio.com';
+		$message .= $_POST['Message'];
 		$from = $_POST['Email'];
 		$from_name = $_POST['Name'];
-		$result = send_email($to,$subject,$message,$from,$from_name);
+		$result = send_email($to,$subject,$message,'noreply@autospazio.com',$from_name);
 	}else{$result=false;}
 	if($result){
 		echo 'success';

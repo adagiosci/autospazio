@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html >
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" >
+	<?php 
+		$uri = $_SERVER['REQUEST_URI'];
+		$server = $_SERVER['SERVER_NAME'];
+		$url = $server.$uri;
+	?>	
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 	<meta charset="UTF-8">
 	<meta name="google-site-verification" content="hpqpPlYGTWQCU3MlWkSgYh2xhmmHY8dtTfHec3L-2Rk" />
@@ -9,29 +14,37 @@
 	<title><?php single_post_title(); ?></title>
 	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,900' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/img/favicon.ico" type="image/x-icon"/>
-	<?php wp_head(); ?>
 	<?php if (get_query_var('pagename') =='galeria' ){ ?>
-	<script type="text/javascript">
-		jQuery(function($) {
-    			var nextgen_fancybox_init = function() {
-    			var selector = nextgen_lightbox_filter_selector($, $(".ngg-fancybox"));
-        		selector.fancybox({
-            		titlePosition: 'inside',
-            		// Needed for twenty eleven
-            		onComplete: function() {
-            			href = $(this).attr('href');
-            			$('#fancybox-title').prepend("<a href='http://www.facebook.com/sharer.php?u=" + href + "' target='_blank' onClick='jsOnclick(this); return false' >Compartir en Facebook</a>");
-                			$('#fancybox-wrap').css('z-index', 10000);
-            		}
-        		});
-   		 	};
-   			$(this).bind('refreshed', nextgen_fancybox_init);
-    			nextgen_fancybox_init();
-		});	
-	</script>
+
+	<?php 
+		$picture = isset($_GET['picture'])?$_GET['picture']:'';
+		if($picture != ''){
+			$gallery = $_GET['gallery'];
+			?> 
+			<meta property="og:url" content="http://<?php echo $url ?>" />
+			<meta property="og:title" content="www.autospazio.com" />
+			<meta property="og:description" content="" />
+			<meta property="og:image" content="http://autospazio.com/wp-content/gallery/<?php echo $gallery ?>/thumbs/thumbs_<?php echo base64_decode($picture) ?>" />
+			<?php
+		}
+	?>
 	<?php } ?>	
+
+
+	<?php wp_head(); ?>
+
 </head>
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&appId=622309971197041&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 	<input type='hidden' value='<?php bloginfo('template_directory'); ?>' id='template_directory'>
 <div id="wrap"><div id="main" class="clearfix"><div id="topBackRepeat">
 <header>

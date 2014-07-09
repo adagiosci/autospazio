@@ -7,7 +7,7 @@
 <div class='clear'></div>
 <div id='contact'>
 	<div class='map'>
-		<iframe style='width:100%;border:none;overflow:hidden;height:100%'  src="https://maps.google.com.mx/maps/ms?msa=0&amp;msid=206393643423893916463.0004ea9e62a8c608dad9e&amp;ie=UTF8&amp;t=h&amp;ll=21.150635,-86.772079&amp;spn=0.06564,0.17149&amp;z=13&amp;output=embed"></iframe>
+		<iframe width="100%" height="372" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=Cuernavaca+135&amp;aq=&amp;sll=18.934217,-99.2171&amp;sspn=0.045059,0.0739&amp;ie=UTF8&amp;hq=&amp;hnear=135,+Cuernavaca,+Morelos&amp;ll=18.927567,-99.184189&amp;spn=0.02253,0.03695&amp;t=m&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.mx/maps?f=q&amp;source=embed&amp;hl=es-419&amp;geocode=&amp;q=Cuernavaca+135&amp;aq=&amp;sll=18.934217,-99.2171&amp;sspn=0.045059,0.0739&amp;ie=UTF8&amp;hq=&amp;hnear=135,+Cuernavaca,+Morelos&amp;ll=18.927567,-99.184189&amp;spn=0.02253,0.03695&amp;t=m&amp;z=14" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small>
 	</div>
 	<section class='formulario'>
 		<div class='container'>

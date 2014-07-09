@@ -4,9 +4,9 @@
 		return false;
 	}
 </script>
-<script type="text/javascript">
+<!--script type="text/javascript">
 	$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox();
-</script>
+</script-->
 
 <?php 
 /**
@@ -52,7 +52,7 @@ Follow variables are useable :
 	<div id="ngg-image-<?php echo $image->pid ?>" class="ngg-gallery-thumbnail-box <?php if($_x == 6){ echo 'last';$_x=0;}  ?>" <?php echo $image->style ?> >
 		<div class="ngg-gallery-thumbnail" >
 			
-			<a href="<?php echo nextgen_esc_url($image->imageURL) ?>" 
+			<a href="<?php echo nextgen_esc_url($image->imageURL) ?>#<?php echo base64_encode(esc_attr($image->filename)); ?>"
                title="<?php echo esc_attr($image->title); ?>"
                data-src="<?php echo nextgen_esc_url($image->imageURL); ?>"
                data-thumbnail="<?php echo nextgen_esc_url($image->thumbnailURL); ?>"

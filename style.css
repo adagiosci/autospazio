@@ -15,9 +15,20 @@ License URI:
 @import url('css/reset.css');
 @import url('css/stickyFooter.css');
 body{font-size: 12pt;font-family: 'Titillium Web', sans-serif;}
-a {text-decoration: none}
+a {text-decoration: none;color: black}
 .container{width: 862px;margin: 0px auto}
 .clear{clear:both}
+.image-direction{width: 100%; max-width:850px;margin: 0px auto;display: block;}
+.input-link{border: 1px solid black;width: 100%;max-width: 450px;padding: 3px 7px}
+.hidden{display: none;}
+#sharelink{position: fixed;width: 620px;height: 155px;top:50%;left: 50%;z-index: 10010;margin: -77px 0 0 -310px;}
+#sharelink{background: url(img/bg-overlay.png);padding:50px 55px 0}
+#sharelink #link-share{background: none repeat scroll 0 0 #FFFFFF;border: 7px solid #FFFFFF;color: #333333;font: 12px/20px Arial;overflow: hidden;padding:0 10px;position: relative;white-space: nowrap}
+#sharelink .ins{text-align: center;color: white;font-size: 18px}
+#sharelink .share-text{color:#898989;text-align: left;}
+#sharelink .close{background: url(img/equis.png);display: block;height: 0;overflow: hidden;padding: 22px 0 0;position: absolute;right: 11px;top:7px;width: 24px}
+#sharelink.hidden{display: none;}
+#see-link{background: url(img/icon-link.png) no-repeat;height: 20px;line-height: 20px;padding: 0 0 0 25px}
 
 /*header*/
 header{height: 105px;box-shadow: 0px 5px 10px #888888;z-index: 2;position: relative;}
